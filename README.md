@@ -67,12 +67,26 @@ Verifica las instalaciones:
    git clone https://github.com/animationware/handle-users-api.git
    cd handle-users-api
    ```
+2.  Realiza la instalación de dependencias necesarias y creación de archivo go.sum para realizar verificación checksum de dependencias:
+   go mod tidy
+
 2. Levantar MongoDB (local o en docker):
     docker compose up --build
 
-La API estará disponible en http://localhost:3000
-MongoDB estará disponible en mongodb://mongo:27017/handle-users-db
-
+## Información Adicional y Pruebas funcionales:
+1. La API estará disponible en http://localhost:3000
+2. MongoDB estará disponible en mongodb://mongo:27017/handle-users-db
+3. Creación de Usuario:
+   curl -X POST http://localhost:3000/users/    -H "Content-Type: application/json"    -d '{"name":"Michael Romero","email":"michael@example.com"}'
+4. Obtener todos los Usuarios:
+   curl http://localhost:3000/users/
+5. Actualizar usuario:
+   curl -X PUT http://localhost:3000/users/<ID-Usuario> -H "Content-Type: application/json" -d '{"name":"Nombre Actualizado","email":"mail.updated@example.com"}'
+6. Eliminar usuario:
+   curl -X DELETE http://localhost:3000/users/<ID-Usuario>
+7. Obtener usuario por ID:
+   curl http://localhost:3000/users/<ID-Usuario>
+   
 ## Arquitectura y Patrones
 
 Se utilizó el patrón Repository-Service-Handler (arquitectura en capas):
