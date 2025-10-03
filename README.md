@@ -81,11 +81,11 @@ Verifica las instalaciones:
 4. Obtener todos los Usuarios:
    curl http://localhost:3000/users/
 5. Actualizar usuario:
-   curl -X PUT http://localhost:3000/users/<ID-Usuario> -H "Content-Type: application/json" -d '{"name":"Nombre Actualizado","email":"mail.updated@example.com"}'
+   `curl -X PUT http://localhost:3000/users/<ID-Usuario> -H "Content-Type: application/json" -d '{"name":"Nombre Actualizado","email":"mail.updated@example.com"}'`
 6. Eliminar usuario:
-   curl -X DELETE http://localhost:3000/users/<ID-Usuario>
+   `curl -X DELETE http://localhost:3000/users/<ID-Usuario>`
 7. Obtener usuario por ID:
-   curl http://localhost:3000/users/<ID-Usuario>
+   `curl http://localhost:3000/users/<ID-Usuario>`
    
 ## Arquitectura y Patrones
 
