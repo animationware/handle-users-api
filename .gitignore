@@ -1,0 +1,21 @@
+# Archivos binarios de Go
+/bin/
+/*.exe
+/*.out
+/*.test
+
+# Dependencias de Go
+go.sum
+vendor/
+
+# Archivos de configuración locales
+.env
+
+# Docker (volúmenes o datos persistentes)
+mongo_data/
+
+# Archivos de logs
+*.log
+
+# Mac / Linux específicos
+.DS_Store
