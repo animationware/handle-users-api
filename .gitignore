@@ -5,7 +5,6 @@
 /*.test
 
 # Dependencias de Go
-go.sum
 vendor/
 
 # Archivos de configuración locales
